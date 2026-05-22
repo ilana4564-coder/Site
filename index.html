@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CataBug</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LEAF BACKGROUND -->
+  <div class="leaf-bg">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;width:100%;height:100%">
+      <defs>
+        <style>
+          .lv { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+          .lb { opacity: 0.22; }
+          .lc1 { fill: #b8e87a; stroke: #4a7a10; }
+          .lc2 { fill: #8ecf50; stroke: #3a6200; }
+          .lc3 { fill: #d4f0a0; stroke: #5a8a20; }
+        </style>
+      </defs>
+
+      <!-- LEAF MACRO: filled oval with midrib + side veins, each as a group with transform -->
+
+      <!-- leaf shape: rounded at tip, slight point at base -->
+      <!-- path: base at 0,0, tip at 0,-34, width ~16 each side -->
+
+      <g class="lb" transform="translate(60,80) rotate(-30)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(200,40) rotate(20) scale(1.4)">
+        <path class="lc2" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(380,70) rotate(-55) scale(0.85)">
+        <path class="lc3" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(560,30) rotate(15) scale(1.6)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(780,90) rotate(-40) scale(1.1)">
+        <path class="lc2" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(980,50) rotate(35) scale(1.3)">
+        <path class="lc3" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(1200,75) rotate(-20) scale(0.9)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(1400,110) rotate(60) scale(1.2)">
+        <path class="lc2" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(100,250) rotate(45) scale(1.5)">
+        <path class="lc3" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(310,200) rotate(-60) scale(1.0)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(500,270) rotate(25) scale(1.3)">
+        <path class="lc2" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(700,220) rotate(-15) scale(0.8)">
+        <path class="lc3" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(880,290) rotate(50) scale(1.7)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(1080,240) rotate(-35) scale(1.1)">
+        <path class="lc2" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(1300,270) rotate(10) scale(1.4)">
+        <path class="lc3" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(50,450) rotate(-25) scale(1.2)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(260,500) rotate(65) scale(0.95)">
+        <path class="lc2" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(470,420) rotate(-50) scale(1.5)">
+        <path class="lc3" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(680,480) rotate(30) scale(1.0)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(900,440) rotate(-70) scale(1.3)">
+        <path class="lc2" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(1120,470) rotate(40) scale(0.85)">
+        <path class="lc3" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(1360,500) rotate(-15) scale(1.6)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(140,670) rotate(55) scale(1.1)">
+        <path class="lc2" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(380,700) rotate(-40) scale(1.4)">
+        <path class="lc3" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(610,660) rotate(20) scale(0.9)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(830,720) rotate(-60) scale(1.2)">
+        <path class="lc2" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(1050,680) rotate(45) scale(1.0)">
+        <path class="lc3" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#4a7a10" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+      <g class="lb" transform="translate(1280,710) rotate(-30) scale(1.3)">
+        <path class="lc1" stroke-width="1.2" d="M0,0 C-14,-8 -18,-22 -10,-32 C-4,-40 4,-40 10,-32 C18,-22 14,-8 0,0Z"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.8" x1="0" y1="0" x2="0" y2="-32"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="-8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-10" x2="8" y2="-16"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="-7" y2="-26"/>
+        <line class="lv" stroke="#3a6200" stroke-width="0.5" x1="0" y1="-20" x2="7" y2="-26"/>
+      </g>
+
+    </svg>
+  </div>
+
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- BIG HEADER IMAGE -->
+    <div class="site-header-img" onclick="showPage('home')" style="cursor:pointer;">
+      <img src="images/catabug.png" class="header-img-real" alt="CataBug">
+    </div>
+
+
+  </div>
+
+  <!-- FANART FLOATING BUTTON -->
+  <a class="fanart-btn" onclick="showPage('fanart')"><span class="fanart-btn-icon">🎨</span>FANART</a>
+  <!-- HOME PAGE -->
+  <div id="page-home" class="page active">
+    <div class="desktop">
+      <div class="desktop-grid" id="bug-grid"></div>
+    </div>
+  </div>
+
+  <!-- FANART PAGE -->
+  <div id="page-fanart" class="page">
+    <div class="desktop" style="padding-top:40px;">
+      <div class="fanart-placeholder">
+        <div class="fanart-titlebar">📁 fanart — coming soon!</div>
+        <div class="fanart-body">
+          <p>this page is<br>under construction<br><br>🚧🐞🚧<br><br>check back soon!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP OVERLAY -->
+  <div class="popup-overlay" id="popup-overlay" onclick="closePopup(event)">
+    <div class="popup-window" id="popup-window">
+      <div class="popup-titlebar" id="popup-titlebar">
+        <div class="popup-titlebar-title">
+          <span id="popup-title-text">Bug Info</span>
+        </div>
+        <div class="popup-close-btn" onclick="closePopup()">✕</div>
+      </div>
+      <div class="popup-body">
+        <div class="popup-photos" id="popup-img-wrap"></div>
+        <div class="popup-info">
+          <div class="popup-bug-name" id="popup-name"></div>
+          <div class="popup-bug-latin" id="popup-latin"></div>
+          <div class="popup-divider"></div>
+          <div id="popup-facts"></div>
+          <div class="popup-divider"></div>
+          <!-- WORM RATING -->
+          <div class="worm-rating">
+            <div class="worm-label">RATE THIS BUG</div>
+            <div class="worm-stars" id="worm-stars">
+              <span class="worm" data-val="1">🪱</span>
+              <span class="worm" data-val="2">🪱</span>
+              <span class="worm" data-val="3">🪱</span>
+              <span class="worm" data-val="4">🪱</span>
+              <span class="worm" data-val="5">🪱</span>
+            </div>
+            <div class="worm-score" id="worm-score">— / 5 worms</div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-footer" id="popup-footer"></div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-bar">
+    <span class="marquee-text">✦ welcome to catabug — the ultimate bug catalogue ✦ explore the insect world one .exe at a time ✦ double-click a bug to learn more! ✦ 🐛🦋🐝🐞🦗🪲🦟🪳🦂🕷️ ✦</span>
+  </div>
+
+  <audio id="audio-player" style="display:none"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
